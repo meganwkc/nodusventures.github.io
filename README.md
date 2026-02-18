@@ -1,1 +1,1748 @@
-# nodusventures.github.io
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nodus Ventures — Agricultural Mineral Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #111111;
+            --ink-light: #444444;
+            --ink-faint: #888888;
+            --rule: #d0d0d0;
+            --rule-light: #e8e8e8;
+            --page: #fafaf8;
+            --white: #ffffff;
+            --accent: #1a3f6f;
+            --accent-mid: #2a5fa0;
+            --accent-light: #dce8f5;
+            --gold: #c17817;
+            --gold-light: #fdf3e0;
+            --success: #1a5c35;
+            --danger: #7a1a1a;
+            --proto: #b34500;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Barlow', sans-serif;
+            background: var(--page);
+            color: var(--ink);
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        /* PROTOTYPE BANNER */
+        .proto-bar {
+            background: var(--proto);
+            color: #fff;
+            text-align: center;
+            padding: 9px 20px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            position: relative;
+        }
+        .proto-bar::before, .proto-bar::after {
+            content: '//';
+            opacity: 0.4;
+            margin: 0 12px;
+        }
+
+        /* HEADER */
+        header {
+            background: var(--white);
+            border-bottom: 2px solid var(--ink);
+            position: sticky;
+            top: 0;
+            z-index: 200;
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 48px;
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+        }
+        .logo-block {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            padding: 22px 0;
+            border-right: 1px solid var(--rule);
+            padding-right: 32px;
+        }
+        .logo-svg { width: 44px; height: 44px; }
+        .brand-stack { line-height: 1.2; }
+        .brand-name {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--ink);
+            letter-spacing: 0.3px;
+        }
+        .brand-sub {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--ink-faint);
+            font-weight: 500;
+        }
+        nav {
+            display: flex;
+            align-items: stretch;
+        }
+        nav a {
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--ink-light);
+            text-decoration: none;
+            border-right: 1px solid var(--rule);
+            transition: all 0.2s;
+        }
+        nav a:hover { background: var(--accent-light); color: var(--accent); }
+        nav a.cta {
+            background: var(--accent);
+            color: white;
+            border-right: none;
+            padding: 0 28px;
+        }
+        nav a.cta:hover { background: var(--accent-mid); }
+
+        /* LAYOUT */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+
+        /* HERO */
+        .hero {
+            background: var(--white);
+            border-bottom: 1px solid var(--rule);
+            padding: 0 0 0 0;
+            border-top: 3px solid var(--ink);
+        }
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+        .hero-eyebrow {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+        .hero-headline {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 52px;
+            font-weight: 400;
+            line-height: 1.2;
+            color: var(--ink);
+            max-width: 820px;
+            margin-bottom: 24px;
+        }
+        .hero-lead {
+            font-size: 19px;
+            color: var(--ink-light);
+            max-width: 680px;
+            line-height: 1.65;
+            margin-bottom: 56px;
+            font-weight: 300;
+        }
+        .hero-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 2px solid var(--ink);
+            border-left: 1px solid var(--rule);
+        }
+        .hero-card {
+            padding: 32px 36px;
+            border-right: 1px solid var(--rule);
+            background: var(--white);
+        }
+        .hero-card-label {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--ink-faint);
+            margin-bottom: 10px;
+        }
+        .hero-card-text {
+            font-size: 17px;
+            font-weight: 500;
+            color: var(--ink);
+            line-height: 1.5;
+        }
+
+        /* SECTIONS */
+        .section {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--rule);
+        }
+        .section-dark {
+            background: var(--ink);
+            color: var(--white);
+        }
+        .section-tinted {
+            background: var(--accent-light);
+        }
+        .section-gold {
+            background: var(--gold-light);
+            border-top: 3px solid var(--gold);
+        }
+
+        .section-header {
+            margin-bottom: 52px;
+        }
+        .section-label {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+        .section-dark .section-label { color: rgba(255,255,255,0.5); }
+        .section-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 38px;
+            font-weight: 400;
+            line-height: 1.25;
+            border-bottom: 2px solid currentColor;
+            padding-bottom: 16px;
+            display: inline-block;
+        }
+        .section-intro {
+            font-size: 16px;
+            color: var(--ink-light);
+            max-width: 760px;
+            margin-top: 16px;
+            line-height: 1.7;
+        }
+        .section-dark .section-intro { color: rgba(255,255,255,0.65); }
+
+        /* SUPPLY CHAIN HIGHLIGHT */
+        .supply-strip {
+            background: var(--accent);
+            color: white;
+            padding: 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .supply-strip-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 48px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border-left: 1px solid rgba(255,255,255,0.15);
+        }
+        .supply-item {
+            padding: 30px 28px;
+            border-right: 1px solid rgba(255,255,255,0.15);
+        }
+        .supply-item-num {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 38px;
+            font-weight: 700;
+            color: white;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+        .supply-item-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: rgba(255,255,255,0.7);
+            font-weight: 600;
+        }
+
+        /* SOLUTIONS GRID */
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--rule);
+            border: 1px solid var(--rule);
+            margin-top: 40px;
+        }
+        .solution-card {
+            background: var(--white);
+            padding: 40px;
+            transition: background 0.2s;
+        }
+        .solution-card:hover { background: var(--accent-light); }
+        .sol-num {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 52px;
+            font-weight: 400;
+            color: var(--rule);
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+        .sol-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 12px;
+        }
+        .sol-desc {
+            font-size: 14px;
+            color: var(--ink-light);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        .sol-list { list-style: none; border-top: 1px solid var(--rule); padding-top: 16px; }
+        .sol-list li {
+            font-size: 14px;
+            color: var(--ink);
+            padding: 7px 0;
+            padding-left: 18px;
+            position: relative;
+            border-bottom: 1px solid var(--rule-light);
+        }
+        .sol-list li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        /* ATTAPULGITE SPECS */
+        .spec-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.15);
+            margin-top: 40px;
+        }
+        .spec-block {
+            background: rgba(255,255,255,0.05);
+            padding: 36px 40px;
+        }
+        .spec-block-title {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+            padding-bottom: 10px;
+        }
+        .spec-list { list-style: none; }
+        .spec-list li {
+            font-size: 15px;
+            color: rgba(255,255,255,0.85);
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            padding-left: 16px;
+            position: relative;
+        }
+        .spec-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: rgba(255,255,255,0.3);
+            font-size: 12px;
+        }
+
+        /* PROCESS / RRT */
+        .process-flow {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: var(--rule);
+            border: 1px solid var(--rule);
+            margin-top: 40px;
+        }
+        .process-step {
+            background: var(--white);
+            padding: 36px 32px;
+            position: relative;
+        }
+        .process-step:not(:last-child)::after {
+            content: '→';
+            position: absolute;
+            right: -14px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: var(--rule);
+            z-index: 2;
+            background: var(--white);
+            padding: 4px 2px;
+        }
+        .ps-num {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            margin-bottom: 14px;
+        }
+        .ps-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        .ps-desc {
+            font-size: 13px;
+            color: var(--ink-light);
+            line-height: 1.65;
+        }
+
+        /* ADVANTAGES */
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1px;
+            background: var(--rule);
+            border: 1px solid var(--rule);
+            margin-top: 40px;
+        }
+        .adv-item {
+            background: var(--white);
+            padding: 32px 28px;
+            text-align: center;
+        }
+        .adv-num {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .adv-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--ink);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+        .adv-desc {
+            font-size: 13px;
+            color: var(--ink-light);
+            line-height: 1.5;
+        }
+
+        /* COMPARISON TABLE */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid var(--rule);
+            margin-top: 40px;
+            background: var(--white);
+        }
+        .comparison-table thead {
+            background: var(--ink);
+            color: white;
+        }
+        .comparison-table th {
+            padding: 16px 20px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .comparison-table th:first-child { width: 28%; }
+        .comparison-table td {
+            padding: 16px 20px;
+            font-size: 14px;
+            border-bottom: 1px solid var(--rule-light);
+            border-right: 1px solid var(--rule-light);
+            vertical-align: top;
+            line-height: 1.5;
+        }
+        .comparison-table td:last-child { border-right: none; }
+        .comparison-table tr:last-child td { border-bottom: none; }
+        .comparison-table tbody tr:hover { background: var(--page); }
+        .col-old { color: var(--danger); font-weight: 500; }
+        .col-new { color: var(--success); font-weight: 600; }
+        .comparison-table .row-label { font-weight: 600; color: var(--ink); }
+
+        /* YIELD DATA */
+        .yield-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--rule);
+            border: 1px solid var(--rule);
+            margin-top: 40px;
+        }
+        .yield-box {
+            background: var(--white);
+            padding: 36px;
+        }
+        .yield-box h4 {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--ink-faint);
+            border-bottom: 2px solid var(--rule);
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+        .yield-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--rule-light);
+            font-size: 14px;
+        }
+        .yield-row:last-child { border-bottom: none; }
+        .yield-label { color: var(--ink-light); }
+        .yield-val { font-weight: 700; color: var(--success); }
+
+        /* PROOF TABLE */
+        .proof-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--accent);
+            border: 1px solid var(--accent);
+            margin-bottom: 40px;
+        }
+        .proof-metric {
+            background: var(--accent);
+            padding: 28px 32px;
+            text-align: center;
+        }
+        .proof-metric-num {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 44px;
+            font-weight: 700;
+            color: white;
+            line-height: 1;
+        }
+        .proof-metric-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.7);
+            margin-top: 6px;
+            font-weight: 600;
+        }
+
+        .proof-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid var(--rule);
+            background: var(--white);
+        }
+        .proof-table thead {
+            background: var(--ink);
+            color: white;
+        }
+        .proof-table th {
+            padding: 14px 20px;
+            text-align: left;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .proof-table td {
+            padding: 18px 20px;
+            font-size: 14px;
+            border-bottom: 1px solid var(--rule-light);
+            border-right: 1px solid var(--rule-light);
+        }
+        .proof-table td:last-child { border-right: none; }
+        .proof-table tbody tr:hover { background: var(--page); }
+        .result-pos { color: var(--success); font-weight: 700; }
+        .result-neg { color: var(--danger); font-weight: 700; }
+
+        /* MISSION BLOCK */
+        .mission-block {
+            background: var(--ink);
+            color: white;
+            padding: 60px;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+        .mission-block::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 40px;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 200px;
+            color: rgba(255,255,255,0.04);
+            line-height: 1;
+        }
+        .mission-text {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 26px;
+            font-weight: 400;
+            font-style: italic;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.9);
+            max-width: 820px;
+            position: relative;
+            z-index: 1;
+        }
+        .mission-attr {
+            margin-top: 24px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.4);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* COMPLIANCE */
+        .compliance-notice {
+            border: 2px solid var(--gold);
+            background: var(--gold-light);
+            padding: 40px 48px;
+        }
+        .compliance-title {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+        .compliance-text {
+            font-size: 15px;
+            color: var(--ink);
+            line-height: 1.75;
+            margin-bottom: 12px;
+        }
+
+        /* TEAM */
+        .team-block {
+            background: var(--white);
+            border: 1px solid var(--rule);
+            padding: 48px;
+        }
+        .team-name {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 28px;
+            font-weight: 400;
+            margin-bottom: 6px;
+        }
+        .team-title {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--ink-faint);
+            margin-bottom: 20px;
+        }
+        .team-bio {
+            font-size: 15px;
+            color: var(--ink-light);
+            max-width: 700px;
+            line-height: 1.75;
+            border-top: 1px solid var(--rule);
+            padding-top: 20px;
+        }
+        .ops-strip {
+            margin-top: 32px;
+            padding-top: 32px;
+            border-top: 2px solid var(--rule);
+            display: flex;
+            align-items: baseline;
+            gap: 24px;
+        }
+        .ops-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--ink-faint);
+            white-space: nowrap;
+        }
+        .ops-regions {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 22px;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* CONTACT */
+        .contact-section {
+            background: var(--accent);
+            padding: 80px 0;
+            border-bottom: none;
+        }
+        .contact-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+        .contact-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 16px;
+        }
+        .contact-heading {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 38px;
+            font-weight: 400;
+            color: white;
+            margin-bottom: 40px;
+        }
+        .contact-box {
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 48px;
+            background: rgba(255,255,255,0.04);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .contact-desc {
+            font-size: 16px;
+            color: rgba(255,255,255,0.7);
+            max-width: 480px;
+            line-height: 1.7;
+        }
+        .contact-email-link {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 24px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            padding-bottom: 3px;
+            white-space: nowrap;
+            transition: border-color 0.2s;
+        }
+        .contact-email-link:hover { border-bottom-color: white; }
+
+        /* FOOTER */
+        footer {
+            background: var(--ink);
+            color: var(--ink-faint);
+            padding: 32px 0;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+        }
+        .footer-proto {
+            background: rgba(179,69,0,0.3);
+            color: #ff9966;
+            padding: 4px 12px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        /* SUPPLIER BADGE */
+        .supplier-badge {
+            background: var(--page);
+            border: 2px solid var(--rule);
+            padding: 32px 40px;
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 32px;
+            align-items: start;
+        }
+        .supplier-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 22px;
+            font-weight: 700;
+            font-family: 'Libre Baskerville', serif;
+        }
+        .supplier-name {
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 6px;
+        }
+        .supplier-desc {
+            font-size: 14px;
+            color: var(--ink-light);
+            line-height: 1.65;
+        }
+        .supplier-stats {
+            margin-top: 16px;
+            display: flex;
+            gap: 32px;
+        }
+        .supplier-stat-num {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1;
+        }
+        .supplier-stat-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--ink-faint);
+            margin-top: 3px;
+        }
+
+        /* CLIENTS ROW */
+        .clients-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 20px;
+        }
+        .client-tag {
+            background: var(--white);
+            border: 1px solid var(--rule);
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--ink-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* DIVIDER */
+        .divider {
+            border: none;
+            border-top: 1px solid var(--rule);
+            margin: 40px 0;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .hero-cards, .solutions-grid, .supply-strip-inner,
+            .spec-grid, .process-flow, .advantages-grid,
+            .yield-grid, .proof-metrics, .comparison-table,
+            .contact-box { 
+                display: block; 
+            }
+            .hero-headline { font-size: 36px; }
+            .section-title { font-size: 28px; }
+            .container, .hero-inner, .header-inner,
+            .contact-inner, .footer-inner { padding-left: 24px; padding-right: 24px; }
+            nav a { padding: 0 14px; font-size: 12px; }
+            .brand-name { font-size: 18px; }
+        }
+        /* SECTION BANNERS */
+        .section-banner {
+            border-top: 3px solid var(--ink);
+            border-bottom: 1px solid var(--rule);
+            background: var(--white);
+            padding: 0;
+        }
+        .section-banner-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 48px;
+            display: flex;
+            align-items: center;
+            gap: 0;
+        }
+        .section-banner-num {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 11px;
+            font-weight: 400;
+            color: var(--ink-faint);
+            letter-spacing: 1px;
+            padding: 16px 24px 16px 0;
+            border-right: 1px solid var(--rule);
+            margin-right: 24px;
+            min-width: 48px;
+        }
+        .section-banner-title {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--ink);
+        }
+        .section-banner-desc {
+            margin-left: auto;
+            font-size: 12px;
+            color: var(--ink-faint);
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- PROTOTYPE BANNER -->
+    <div class="proto-bar">Prototype Version — Development Build — Not for Public Distribution</div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-inner">
+            <div class="logo-block">
+                <svg class="logo-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M60 15C60 15 40 15 40 35C40 55 60 55 60 55C60 55 60 35 80 35C100 35 100 15 80 15Z" fill="#1a3f6f"/>
+                    <path d="M60 55C60 55 60 75 40 75C20 75 20 95 40 95C40 95 40 85 40 75C40 75 60 75 60 95C60 115 80 115 80 95C80 95 80 75 60 75C60 75 60 65 60 55Z" fill="#1a3f6f"/>
+                    <path d="M80 75C80 75 100 75 100 95C100 95 100 85 100 75Z" fill="#1a3f6f"/>
+                    <path d="M40 55C40 55 20 55 20 75C20 75 20 65 20 55Z" fill="#1a3f6f"/>
+                </svg>
+                <div class="brand-stack">
+                    <div class="brand-name">Nodus Ventures</div>
+                    <div class="brand-sub">Mineral Technology</div>
+                </div>
+            </div>
+            <nav>
+                <a href="#overview">Overview</a>
+                <a href="#supply">Supply</a>
+                <a href="#solutions">What We Do</a>
+                <a href="#technology">Technology</a>
+                <a href="#data">Field Data</a>
+                <a href="#organization">About</a>
+                <a href="#contact" class="cta">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <div class="hero" id="overview">
+        <div style="border-bottom:1px solid var(--rule); margin-bottom:0;">
+            <div style="max-width:1200px; margin:0 auto; padding:0 48px; display:flex; align-items:center; gap:0;">
+                <div style="font-family:'Libre Baskerville',serif; font-size:11px; color:var(--ink-faint); letter-spacing:1px; padding:14px 24px 14px 0; border-right:1px solid var(--rule); margin-right:24px; min-width:48px;">01</div>
+                <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:3px; color:var(--ink);">Overview</div>
+                <div style="margin-left:auto; font-size:12px; color:var(--ink-faint); font-style:italic;">Company &amp; identity</div>
+            </div>
+        </div>
+        <div class="hero-inner" style="padding-top:60px;">
+            <p class="hero-eyebrow">Mineral Technology Company</p>
+            <h1 class="hero-headline">We use attapulgite to stabilise waste, improve agricultural efficiency, and produce high-performance absorbent products</h1>
+            <p class="hero-lead">A mineral technology company. We apply attapulgite across waste stabilisation, agricultural efficiency, and high-performance absorbent products — using one material, well.</p>
+            <div class="hero-cards">
+                <div class="hero-card">
+                    <div class="hero-card-label">Core Layer</div>
+                    <div class="hero-card-text">Attapulgite — sourcing, processing, and application across industries</div>
+                </div>
+                <div class="hero-card">
+                    <div class="hero-card-label">Industrial Applications</div>
+                    <div class="hero-card-text">Waste stabilisation · Livestock manure treatment · Fertiliser efficiency · Soil conditioning</div>
+                </div>
+                <div class="hero-card">
+                    <div class="hero-card-label">Product Applications</div>
+                    <div class="hero-card-text">Consumer absorbents · CatPak cat litter · High-performance absorbent materials</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SUPPLY BANNER -->
+    <div class="section-banner">
+        <div class="section-banner-inner">
+            <div class="section-banner-num">02</div>
+            <div class="section-banner-title">Supply</div>
+            <div class="section-banner-desc">Mineral access &amp; supply chain</div>
+        </div>
+    </div>
+
+    <!-- SUPPLY CHAIN STRIP -->
+    <div class="supply-strip" id="supply">
+        <div class="supply-strip-inner">
+            <div class="supply-item">
+                <div class="supply-item-num">24M t</div>
+                <div class="supply-item-label">Premium attapulgite reserve — Australia's only deposit of this scale</div>
+            </div>
+            <div class="supply-item">
+                <div class="supply-item-num">1979</div>
+                <div class="supply-item-label">Year mining commenced — continuous operations to present</div>
+            </div>
+            <div class="supply-item">
+                <div class="supply-item-num">2,700 ha</div>
+                <div class="supply-item-label">Total surveyed tenement — attapulgite and diatomaceous earth</div>
+            </div>
+            <div class="supply-item">
+                <div class="supply-item-num">153 km</div>
+                <div class="supply-item-label">To export port — Asia-Pacific shipping access</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MINERAL SUPPLY SECTION -->
+    <section class="section" id="mineral">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Raw Material</div>
+                <h2 class="section-title">Attapulgite — Our Core Material</h2>
+                <p class="section-intro">Everything we do is built on a single mineral. Attapulgite (also known as Palygorskite) is a natural non-metallic clay with unique fibre-crystal structure, exceptional adsorption capacity, and documented applications across over 2,000 industrial and agricultural use cases. We have secured access to a premium attapulgite deposit — the only one of this scale in Australia.</p>
+            </div>
+
+            <div class="supplier-badge">
+                <div class="supplier-icon">H</div>
+                <div>
+                    <div class="supplier-name">Hudson Resources Limited — Mineral Supply Partner</div>
+                    <p class="supplier-desc">An Australian public company incorporated in 1969. Hudson holds the largest known premium deposit of attapulgite in Australia. Nodus Ventures has secured access to this supply — providing a stable, traceable, long-term source of premium-grade attapulgite for our agricultural, industrial, and consumer product applications across Asia-Pacific markets.</p>
+                    <div class="supplier-stats">
+                        <div>
+                            <div class="supplier-stat-num">23.4M t</div>
+                            <div class="supplier-stat-label">Attapulgite reserve</div>
+                        </div>
+                        <div>
+                            <div class="supplier-stat-num">3.5M t</div>
+                            <div class="supplier-stat-label">Diatomaceous Earth</div>
+                        </div>
+                        <div>
+                            <div class="supplier-stat-num">45+</div>
+                            <div class="supplier-stat-label">Years operating</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <div class="supplier-stat-label" style="margin-bottom: 8px;">Established industrial customers include:</div>
+                        <div class="clients-row">
+                            <span class="client-tag">Shell</span><span class="client-tag">BP</span><span class="client-tag">Ampol</span>
+                            <span class="client-tag">BASF</span><span class="client-tag">Bayer</span><span class="client-tag">Caltex</span>
+                            <span class="client-tag">Indian Oil</span><span class="client-tag">Reliance Industries</span>
+                            <span class="client-tag">Woolworths</span><span class="client-tag">Coles</span><span class="client-tag">Big W</span>
+                            <span class="client-tag">CirrusAg</span><span class="client-tag">Richgro</span><span class="client-tag">UPL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                <div>
+                    <p style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--ink-faint); margin-bottom: 16px; border-bottom: 1px solid var(--rule); padding-bottom: 10px;">Key Material Properties</p>
+                    <ul class="sol-list">
+                        <li>High absorption capacity for water and oil</li>
+                        <li>Thixotropic behaviour — useful in formulations</li>
+                        <li>Strong adsorption for toxins, heavy metals, ammonia</li>
+                        <li>Ion exchange capacity — multiple times enhanced via high-tech treatment</li>
+                        <li>Thermal stability and salt resistance</li>
+                        <li>21 documented macro and trace elements beneficial to plants, animals, and humans</li>
+                        <li>Natural one-dimensional nanomaterial structure</li>
+                    </ul>
+                </div>
+                <div>
+                    <p style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--ink-faint); margin-bottom: 16px; border-bottom: 1px solid var(--rule); padding-bottom: 10px;">Applications Across Our Three Layers</p>
+                    <ul class="sol-list">
+                        <li>Livestock waste stabilisation and manure treatment</li>
+                        <li>Animal feed additive and bedding absorbent</li>
+                        <li>Fertiliser carrier and nutrient stabiliser</li>
+                        <li>Soil amendment and pH adjustment</li>
+                        <li>Heavy metal sequestration in contaminated soils</li>
+                        <li>Consumer absorbent products (cat litter, oil absorbents)</li>
+                        <li>Water treatment and industrial filtration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT WE DO BANNER -->
+    <div class="section-banner">
+        <div class="section-banner-inner">
+            <div class="section-banner-num">03</div>
+            <div class="section-banner-title">What We Do</div>
+            <div class="section-banner-desc">Three layers — one mineral</div>
+        </div>
+    </div>
+
+    <!-- SOLUTIONS SECTION -->
+    <section class="section" id="solutions">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">What We Do</div>
+                <h2 class="section-title">Three Layers — One Mineral</h2>
+                <p class="section-intro">Every application we pursue comes from the same foundation: attapulgite mineral technology. The layers below show how a single material creates coherent value across waste management, agriculture, and consumer products.</p>
+            </div>
+
+            <!-- Layer structure callout -->
+            <div style="background:var(--ink); color:white; padding:28px 40px; margin-bottom:1px; display:flex; align-items:center; gap:20px;">
+                <span style="font-family:'Libre Baskerville',serif; font-size:13px; font-style:italic; color:rgba(255,255,255,0.5);">Foundation</span>
+                <span style="color:rgba(255,255,255,0.2);">→</span>
+                <span style="font-size:15px; font-weight:600; color:white;">Attapulgite: sourcing · processing · application</span>
+                <span style="margin-left:auto; font-size:13px; color:rgba(255,255,255,0.4);">Everything comes from this</span>
+            </div>
+
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="sol-num">01</div>
+                    <div style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:var(--accent); margin-bottom:10px;">Layer 2 — Industrial Applications</div>
+                    <div class="sol-title">Waste Stabilisation &amp; Agriculture</div>
+                    <p class="sol-desc">We stabilise livestock waste and improve the efficiency of fertilisation systems. Attapulgite binds ammonia, moisture, and nutrients — turning a waste problem into a manageable, valuable input.</p>
+                    <ul class="sol-list">
+                        <li>Livestock manure stabilisation</li>
+                        <li>Compost stabilisation and nutrient retention</li>
+                        <li>Fertiliser efficiency improvement</li>
+                        <li>Soil conditioning and pH adjustment</li>
+                        <li>Animal feed and bedding applications</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <div class="sol-num">02</div>
+                    <div style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:var(--accent); margin-bottom:10px;">Layer 2 — Industrial Applications</div>
+                    <div class="sol-title">Rapid Reaction Technology (RRT)</div>
+                    <p class="sol-desc">A nano-composite catalyst system that converts organic waste into ready-to-use organic fertiliser in 3–5 hours. This is how waste stabilisation and agricultural output connect — efficiently, at scale.</p>
+                    <ul class="sol-list">
+                        <li>Organic waste → fertiliser in 3–5 hours</li>
+                        <li>Zero nutrient loss, zero emissions</li>
+                        <li>Pathogen and weed seed inactivation</li>
+                        <li>Reactor sizes: 6, 10, 20, 30 m³</li>
+                        <li>Industrialised, standardised process</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <div class="sol-num">03</div>
+                    <div style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:var(--accent); margin-bottom:10px;">Layer 3 — Product Applications</div>
+                    <div class="sol-title">Consumer &amp; Industrial Absorbents</div>
+                    <p class="sol-desc">The same mineral properties that stabilise waste and improve soils — high absorption, odour control, safe and natural composition — translate directly into high-performance absorbent products.</p>
+                    <ul class="sol-list">
+                        <li>CatPak cat litter — attapulgite-based</li>
+                        <li>High absorbency, low dust, natural mineral</li>
+                        <li>Industrial oil and spill absorbents</li>
+                        <li>Future absorbent product lines</li>
+                        <li>Same mineral, different delivery format</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Circular economy — outcome, not identity -->
+            <div style="margin-top:32px; padding:32px 40px; border:1px solid var(--rule); background:var(--page); display:grid; grid-template-columns:auto 1fr; gap:32px; align-items:start;">
+                <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:var(--ink-faint); white-space:nowrap; padding-top:3px;">The outcome</div>
+                <p style="font-size:16px; color:var(--ink); line-height:1.75;">We stabilise waste and improve fertiliser efficiency using mineral technology. This enables more efficient reuse of agricultural resources — and supports circular agricultural systems as a result. Circular economy is the outcome of doing this work well, not the identity we lead with.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNOLOGY BANNER -->
+    <div class="section-banner">
+        <div class="section-banner-inner">
+            <div class="section-banner-num">04</div>
+            <div class="section-banner-title">Technology</div>
+            <div class="section-banner-desc">RRT process &amp; product specifications</div>
+        </div>
+    </div>
+
+    <!-- ATTAPULGITE MICROBIAL FERTILIZER -->
+    <section class="section section-dark" id="technology">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Core Product</div>
+                <h2 class="section-title" style="color:white; border-bottom-color: rgba(255,255,255,0.2);">Attapulgite Microbial Mineral Organic Fertilizer</h2>
+                <p class="section-intro">Based on the "Minerals + Organic Matter + Microorganisms" three-dimensional theory — functioning as a full-nutrition catering fertilizer for repairing soil ecosystems.</p>
+            </div>
+
+            <div class="spec-grid">
+                <div class="spec-block">
+                    <div class="spec-block-title">Ideal Soil Composition Targets</div>
+                    <ul class="spec-list">
+                        <li>Soil minerals: 38% (suitable for plant growth)</li>
+                        <li>Organic matter: &gt;12%</li>
+                        <li>Soil air: 15%–35%</li>
+                        <li>Soil moisture: 15%–35%</li>
+                        <li>Microorganisms: nematodes, molluscs, arthropods</li>
+                    </ul>
+                </div>
+                <div class="spec-block">
+                    <div class="spec-block-title">Key Product Components</div>
+                    <ul class="spec-list">
+                        <li>Attapulgite — catalytic adsorption, ion exchange</li>
+                        <li>Livestock &amp; poultry manure — organic nutrient source</li>
+                        <li>Microecological preparations — beneficial microorganisms</li>
+                        <li>Natural high-temperature fermentation — kills parasites, aflatoxins</li>
+                        <li>Nano-composite catalyst — rapid organic matter degradation</li>
+                    </ul>
+                </div>
+                <div class="spec-block">
+                    <div class="spec-block-title">Soil Physical &amp; Chemical Improvements</div>
+                    <ul class="spec-list">
+                        <li>Increases air and water permeability</li>
+                        <li>Enhances water retention in sandy soils</li>
+                        <li>Reduces bulk density in compacted soils</li>
+                        <li>Loosens and activates soil to 30cm depth</li>
+                        <li>Improves acidic and saline-alkali soils</li>
+                    </ul>
+                </div>
+                <div class="spec-block">
+                    <div class="spec-block-title">Core Performance Benefits</div>
+                    <ul class="spec-list">
+                        <li>Long-lasting fertilizer effects (180+ days)</li>
+                        <li>Reduces nitrate content by up to 20%</li>
+                        <li>Suppresses root rot and root-knot nematodes</li>
+                        <li>Enhances crop disease and drought resistance</li>
+                        <li>Accelerates crop maturity by 7–10 days</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr style="border:none; border-top:1px solid rgba(255,255,255,0.1); margin: 50px 0;">
+
+            <div class="section-header" style="margin-bottom:32px;">
+                <div class="section-label">RRT Process</div>
+                <h3 style="font-family: 'Libre Baskerville', serif; font-size: 26px; font-weight: 400; color: white;">Rapid Reaction Technology — Process Flow</h3>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08);">
+                <div style="background: rgba(255,255,255,0.04); padding: 32px 28px;">
+                    <div style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:rgba(255,255,255,0.4); margin-bottom:14px;">Phase 01</div>
+                    <div style="font-size:17px; font-weight:700; color:white; margin-bottom:10px;">Input Collection</div>
+                    <p style="font-size:13px; color:rgba(255,255,255,0.6); line-height:1.65;">Diverse organic waste — vegetable scraps, livestock manure, crop residues — collected and classified for pre-treatment</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.04); padding: 32px 28px;">
+                    <div style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:rgba(255,255,255,0.4); margin-bottom:14px;">Phase 02</div>
+                    <div style="font-size:17px; font-weight:700; color:white; margin-bottom:10px;">Pre-Treatment</div>
+                    <p style="font-size:13px; color:rgba(255,255,255,0.6); line-height:1.65;">Raw materials conditioned to meet processing requirements for the catalytic reactor — moisture, particle size, pH</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.04); padding: 32px 28px;">
+                    <div style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:rgba(255,255,255,0.4); margin-bottom:14px;">Phase 03</div>
+                    <div style="font-size:17px; font-weight:700; color:white; margin-bottom:10px;">Catalytic Degradation</div>
+                    <p style="font-size:13px; color:rgba(255,255,255,0.6); line-height:1.65;">Nano-composite catalyst degrades organic matter in 3–5 hours. Zero nutrient loss, zero emissions, zero wastewater generated</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.04); padding: 32px 28px;">
+                    <div style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:rgba(255,255,255,0.4); margin-bottom:14px;">Phase 04</div>
+                    <div style="font-size:17px; font-weight:700; color:white; margin-bottom:10px;">Ready-to-Use Output</div>
+                    <p style="font-size:13px; color:rgba(255,255,255,0.6); line-height:1.65;">Fully matured, compliant organic fertilizer — no seedling burning risk, all pathogens and weed seeds inactivated</p>
+                </div>
+            </div>
+
+            <hr style="border:none; border-top:1px solid rgba(255,255,255,0.1); margin: 50px 0;">
+
+            <!-- FIVE ADVANTAGES -->
+            <div class="section-header" style="margin-bottom:32px;">
+                <div class="section-label">RRT Advantages</div>
+                <h3 style="font-family: 'Libre Baskerville', serif; font-size: 26px; font-weight: 400; color: white;">Five Major Advantages vs. Traditional Methods</h3>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08);">
+                <div style="background: rgba(255,255,255,0.04); padding: 28px 24px; text-align:center;">
+                    <div style="font-family:'Libre Baskerville',serif; font-size:36px; font-weight:700; color:white; line-height:1; margin-bottom:8px;">60×</div>
+                    <div style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; color:rgba(255,255,255,0.7); margin-bottom:10px;">Faster Processing</div>
+                    <p style="font-size:12px; color:rgba(255,255,255,0.5); line-height:1.5;">3–5 hours vs. 30–120 days conventional fermentation</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.04); padding: 28px 24px; text-align:center;">
+                    <div style="font-family:'Libre Baskerville',serif; font-size:36px; font-weight:700; color:white; line-height:1; margin-bottom:8px;">−90%</div>
+                    <div style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; color:rgba(255,255,255,0.7); margin-bottom:10px;">Land Requirement</div>
+                    <p style="font-size:12px; color:rgba(255,255,255,0.5); line-height:1.5;">1/10 the land area of traditional composting systems</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.04); padding: 28px 24px; text-align:center;">
+                    <div style="font-family:'Libre Baskerville',serif; font-size:36px; font-weight:700; color:white; line-height:1; margin-bottom:8px;">Zero</div>
+                    <div style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; color:rgba(255,255,255,0.7); margin-bottom:10px;">Nutrient Loss</div>
+                    <p style="font-size:12px; color:rgba(255,255,255,0.5); line-height:1.5;">vs. 35–70% loss in standard microbial fermentation</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.04); padding: 28px 24px; text-align:center;">
+                    <div style="font-family:'Libre Baskerville',serif; font-size:36px; font-weight:700; color:white; line-height:1; margin-bottom:8px;">100%</div>
+                    <div style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; color:rgba(255,255,255,0.7); margin-bottom:10px;">Pathogen Kill</div>
+                    <p style="font-size:12px; color:rgba(255,255,255,0.5); line-height:1.5;">Weed seeds, parasite eggs, and bacteria completely inactivated</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.04); padding: 28px 24px; text-align:center;">
+                    <div style="font-family:'Libre Baskerville',serif; font-size:36px; font-weight:700; color:white; line-height:1; margin-bottom:8px;">0</div>
+                    <div style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; color:rgba(255,255,255,0.7); margin-bottom:10px;">Emissions</div>
+                    <p style="font-size:12px; color:rgba(255,255,255,0.5); line-height:1.5;">No CO₂, CH₄, or NH₃ — no odour, no secondary pollution</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNOLOGY COMPARISON -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Technology Comparison</div>
+                <h2 class="section-title">RRT vs. Traditional Fermentation</h2>
+                <p class="section-intro">A direct technical comparison of RRT nano-catalytic processing against standard microbial fermentation methods.</p>
+            </div>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Traditional (Microbial Fermentation)</th>
+                        <th>RRT (Nano-Catalytic Method)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="row-label">Processing Time</td><td class="col-old">30–120 days</td><td class="col-new">3–5 hours</td></tr>
+                    <tr><td class="row-label">Nutrient Loss</td><td class="col-old">Approximately 35–70% loss</td><td class="col-new">Zero loss</td></tr>
+                    <tr><td class="row-label">National Standard Compliance</td><td class="col-old">Not fully compliant</td><td class="col-new">Fully compliant (NY/T525-2021)</td></tr>
+                    <tr><td class="row-label">Maturation Degree</td><td class="col-old">Not fully matured — may cause seedling burning</td><td class="col-new">Fully matured, no seedling burning risk</td></tr>
+                    <tr><td class="row-label">Weed Seeds</td><td class="col-old">Not completely inactivated</td><td class="col-new">Completely inactivated</td></tr>
+                    <tr><td class="row-label">Parasite Eggs</td><td class="col-old">Not completely inactivated</td><td class="col-new">Completely inactivated</td></tr>
+                    <tr><td class="row-label">Bacteria &amp; Viruses</td><td class="col-old">Not completely inactivated</td><td class="col-new">Nearly completely inactivated</td></tr>
+                    <tr><td class="row-label">Wastewater Generated</td><td class="col-old">Wastewater generated</td><td class="col-new">No wastewater generated</td></tr>
+                    <tr><td class="row-label">Atmospheric Emissions</td><td class="col-old">CO₂, CH₄, and NH₃ (significant)</td><td class="col-new">No emissions of CO₂, CH₄, or NH₃</td></tr>
+                    <tr><td class="row-label">Environmental Quality</td><td class="col-old">Odours, mosquito breeding, secondary pollution</td><td class="col-new">No odours, no mosquito breeding, pollution-free</td></tr>
+                    <tr><td class="row-label">Land &amp; Labour Requirements</td><td class="col-old">Large land area, high labour, multiple equipment</td><td class="col-new">1/10 land area, minimal labour, fewer equipment</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- FIELD DATA BANNER -->
+    <div class="section-banner">
+        <div class="section-banner-inner">
+            <div class="section-banner-num">05</div>
+            <div class="section-banner-title">Field Data</div>
+            <div class="section-banner-desc">Trial results &amp; pilot outcomes</div>
+        </div>
+    </div>
+
+    <!-- FIELD DATA -->
+    <section class="section" id="data">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Field Data</div>
+                <h2 class="section-title">Trial Results &amp; Pilot Data</h2>
+                <p class="section-intro">Four independent datasets from field trials and commercial pilot programs across China and Australia. All results are measured against equivalent control conditions.</p>
+            </div>
+
+            <!-- Top metrics -->
+            <div class="proof-metrics" style="grid-template-columns: repeat(5,1fr);">
+                <div class="proof-metric">
+                    <div class="proof-metric-num">4</div>
+                    <div class="proof-metric-label">Published Trials</div>
+                </div>
+                <div class="proof-metric">
+                    <div class="proof-metric-num">2</div>
+                    <div class="proof-metric-label">Countries</div>
+                </div>
+                <div class="proof-metric">
+                    <div class="proof-metric-num">+45%</div>
+                    <div class="proof-metric-label">N Utilisation Efficiency</div>
+                </div>
+                <div class="proof-metric">
+                    <div class="proof-metric-num">−23%</div>
+                    <div class="proof-metric-label">Nitrate in Cabbage</div>
+                </div>
+                <div class="proof-metric">
+                    <div class="proof-metric-num">+39pt</div>
+                    <div class="proof-metric-label">HD Recovery (Poultry)</div>
+                </div>
+            </div>
+
+            <!-- ======================== TRIAL 01A — CHINESE CABBAGE ======================== -->
+            <div style="margin-top:56px;">
+                <div style="background:var(--accent); color:white; padding:14px 28px; display:flex; align-items:baseline; justify-content:space-between;">
+                    <span style="font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:2px;">Trial 01A — Chinese Cabbage Field Trial (白菜)</span>
+                    <span style="font-size:13px; color:rgba(255,255,255,0.7);">Pingdu, Shandong Province, China</span>
+                </div>
+                <div style="background:var(--accent-light); padding:20px 28px; border:1px solid var(--accent); border-top:none; margin-bottom:24px;">
+                    <p style="font-size:14px; color:var(--ink-light); line-height:1.7; margin-bottom:10px;"><strong>Trial Purpose:</strong> Evaluate agronomic, economic, and food safety performance of attapulgite-enhanced fertiliser compared to conventional chemical fertiliser under real agricultural field conditions. The trial specifically measured total crop yield, marketable crop yield, fertiliser utilisation efficiency, crop quality metrics, nitrate accumulation in plant tissue, heavy metal uptake, growth stability and uniformity, and soil moisture performance — parameters selected because they directly determine farm profitability, crop quality, and regulatory compliance.</p>
+                    <p style="font-size:14px; color:var(--ink-light); line-height:1.7;"><strong>Trial Structure:</strong> Two treatment groups — control (standard chemical fertiliser, conventional farming practices) and test (attapulgite-enhanced fertiliser at equivalent nutrient input levels). Both groups were cultivated under identical climate conditions, irrigation practices, planting density, and crop management to ensure valid comparative results. The trial was conducted on typical regional agricultural soil in open-field commercial farming conditions.</p>
+                </div>
+
+                <!-- Results Grid -->
+                <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--rule); border:1px solid var(--rule); margin-bottom:20px;">
+                    <div style="background:var(--white); padding:28px 24px;">
+                        <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--ink-faint); margin-bottom:14px;">Total Yield</div>
+                        <div class="yield-row"><span class="yield-label">Chemical fertiliser</span><span style="font-weight:600; color:var(--ink);">7,230 kg/ha</span></div>
+                        <div class="yield-row"><span class="yield-label">Attapulgite fertiliser</span><span class="yield-val">7,448 kg/ha</span></div>
+                        <div style="margin-top:14px; padding-top:12px; border-top:1px solid var(--rule-light); font-size:13px; color:var(--success); font-weight:700;">+3.0% total yield</div>
+                        <p style="font-size:12px; color:var(--ink-light); margin-top:10px; line-height:1.5;">Attapulgite improved fertiliser efficiency rather than increasing fertiliser quantity — demonstrating that the system supports strong crop growth without negatively impacting productivity.</p>
+                    </div>
+                    <div style="background:var(--white); padding:28px 24px;">
+                        <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--ink-faint); margin-bottom:14px;">Marketable Yield</div>
+                        <div class="yield-row"><span class="yield-label">Chemical fertiliser</span><span style="font-weight:600; color:var(--ink);">84.3% → 6,095 kg/ha</span></div>
+                        <div class="yield-row"><span class="yield-label">Attapulgite fertiliser</span><span class="yield-val">91.2% → 6,794 kg/ha</span></div>
+                        <div style="margin-top:14px; padding-top:12px; border-top:1px solid var(--rule-light); font-size:13px; color:var(--success); font-weight:700;">+11.5% marketable yield</div>
+                        <p style="font-size:12px; color:var(--ink-light); margin-top:10px; line-height:1.5;">Marketable yield represents the portion of crop that meets commercial sale standards. This improvement indicates more consistent plant development, fewer defects, and higher overall crop quality — the most economically important metric for farmers.</p>
+                    </div>
+                    <div style="background:var(--white); padding:28px 24px;">
+                        <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--ink-faint); margin-bottom:14px;">Revenue Impact (¥3.2/kg)</div>
+                        <div class="yield-row"><span class="yield-label">Chemical fertiliser</span><span style="font-weight:600; color:var(--ink);">¥19,504/ha</span></div>
+                        <div class="yield-row"><span class="yield-label">Attapulgite fertiliser</span><span class="yield-val">¥21,741/ha</span></div>
+                        <div style="margin-top:14px; padding-top:12px; border-top:1px solid var(--rule-light); font-size:13px; color:var(--success); font-weight:700;">+¥2,237 revenue per hectare</div>
+                        <p style="font-size:12px; color:var(--ink-light); margin-top:10px; line-height:1.5;">Revenue increase driven primarily by higher marketable yield and improved crop quality, not simply increased total biomass. Confirms commercial viability of the system.</p>
+                    </div>
+                    <div style="background:var(--white); padding:28px 24px;">
+                        <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--ink-faint); margin-bottom:14px;">Nitrate Content (food safety)</div>
+                        <div class="yield-row"><span class="yield-label">Chemical fertiliser</span><span style="color:var(--danger); font-weight:600;">2,480 mg/kg</span></div>
+                        <div class="yield-row"><span class="yield-label">Attapulgite fertiliser</span><span class="yield-val">1,910 mg/kg</span></div>
+                        <div style="margin-top:14px; padding-top:12px; border-top:1px solid var(--rule-light); font-size:13px; color:var(--success); font-weight:700;">−23% nitrate accumulation</div>
+                        <p style="font-size:12px; color:var(--ink-light); margin-top:10px; line-height:1.5;">Excess nitrate accumulation is a major food safety concern and can limit market access. Attapulgite improves nutrient retention and controlled release, preventing excess nitrate uptake into plant tissue.</p>
+                    </div>
+                    <div style="background:var(--white); padding:28px 24px;">
+                        <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--ink-faint); margin-bottom:14px;">Heavy Metal Uptake</div>
+                        <div class="yield-row"><span class="yield-label">Lead — Chemical</span><span style="color:var(--danger); font-weight:600;">0.182 mg/kg</span></div>
+                        <div class="yield-row"><span class="yield-label">Lead — Attapulgite</span><span class="yield-val">0.131 mg/kg (−28%)</span></div>
+                        <div class="yield-row"><span class="yield-label">Cadmium — Chemical</span><span style="color:var(--danger); font-weight:600;">0.041 mg/kg</span></div>
+                        <div class="yield-row"><span class="yield-label">Cadmium — Attapulgite</span><span class="yield-val">0.028 mg/kg (−32%)</span></div>
+                        <p style="font-size:12px; color:var(--ink-light); margin-top:10px; line-height:1.5;">Attapulgite binds heavy metals in soil through adsorption, reducing plant absorption. Improves food safety and helps meet agricultural safety standards.</p>
+                    </div>
+                    <div style="background:var(--white); padding:28px 24px;">
+                        <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--ink-faint); margin-bottom:14px;">Growth Uniformity</div>
+                        <div class="yield-row"><span class="yield-label">Chemical fertiliser (variation)</span><span style="color:var(--danger); font-weight:600;">18.4%</span></div>
+                        <div class="yield-row"><span class="yield-label">Attapulgite fertiliser (variation)</span><span class="yield-val">11.2%</span></div>
+                        <div style="margin-top:14px; padding-top:12px; border-top:1px solid var(--rule-light); font-size:13px; color:var(--success); font-weight:700;">−39% size variation coefficient</div>
+                        <p style="font-size:12px; color:var(--ink-light); margin-top:10px; line-height:1.5;">Lower variation coefficient indicates more consistent plant growth. Uniform crops improve harvest efficiency, increase commercial grading rates, and reduce waste.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ======================== TRIAL 01B — POTATO ======================== -->
+            <div style="margin-top:64px;">
+                <div style="background:var(--accent); color:white; padding:14px 28px; display:flex; align-items:baseline; justify-content:space-between;">
+                    <span style="font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:2px;">Trial 01B — Potato Field Trial (马铃薯)</span>
+                    <span style="font-size:13px; color:rgba(255,255,255,0.7);">Pingdu, Shandong Province, China</span>
+                </div>
+                <div style="background:var(--accent-light); padding:20px 28px; border:1px solid var(--accent); border-top:none; margin-bottom:24px;">
+                    <p style="font-size:14px; color:var(--ink-light); line-height:1.7;"><strong>Trial Purpose:</strong> Same trial structure as 01A — evaluate attapulgite-enhanced fertiliser vs. standard chemical fertiliser under identical field conditions, with particular focus on tuber size distribution, marketable yield quality, and fertiliser utilisation efficiency. Potato was selected due to its sensitivity to fertiliser performance and commercial importance in the region.</p>
+                </div>
+
+                <!-- Results Grid -->
+                <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--rule); border:1px solid var(--rule); margin-bottom:20px;">
+                    <div style="background:var(--white); padding:28px 24px;">
+                        <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--ink-faint); margin-bottom:14px;">Total Yield</div>
+                        <div class="yield-row"><span class="yield-label">Chemical fertiliser</span><span style="font-weight:600; color:var(--ink);">5,460 kg/ha</span></div>
+                        <div class="yield-row"><span class="yield-label">Attapulgite fertiliser</span><span class="yield-val">5,870 kg/ha</span></div>
+                        <div style="margin-top:14px; padding-top:12px; border-top:1px solid var(--rule-light); font-size:13px; color:var(--success); font-weight:700;">+7.5% total yield</div>
+                        <p style="font-size:12px; color:var(--ink-light); margin-top:10px; line-height:1.5;">Demonstrates improved fertiliser utilisation efficiency and improved soil nutrient availability under identical input conditions.</p>
+                    </div>
+                    <div style="background:var(--white); padding:28px 24px;">
+                        <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--ink-faint); margin-bottom:14px;">Marketable Yield</div>
+                        <div class="yield-row"><span class="yield-label">Chemical fertiliser</span><span style="font-weight:600; color:var(--ink);">88.1% → 4,810 kg/ha</span></div>
+                        <div class="yield-row"><span class="yield-label">Attapulgite fertiliser</span><span class="yield-val">93.4% → 5,483 kg/ha</span></div>
+                        <div style="margin-top:14px; padding-top:12px; border-top:1px solid var(--rule-light); font-size:13px; color:var(--success); font-weight:700;">+13.9% marketable yield</div>
+                        <p style="font-size:12px; color:var(--ink-light); margin-top:10px; line-height:1.5;">Marketable yield improvement reflects improved crop quality and reduced defects — tubers that meet commercial grading standards for size, shape, and surface quality.</p>
+                    </div>
+                    <div style="background:var(--white); padding:28px 24px;">
+                        <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--ink-faint); margin-bottom:14px;">Average Tuber Size</div>
+                        <div class="yield-row"><span class="yield-label">Chemical fertiliser</span><span style="font-weight:600; color:var(--ink);">132 g</span></div>
+                        <div class="yield-row"><span class="yield-label">Attapulgite fertiliser</span><span class="yield-val">148 g</span></div>
+                        <div style="margin-top:14px; padding-top:12px; border-top:1px solid var(--rule-light); font-size:13px; color:var(--success); font-weight:700;">+12.1% average tuber weight</div>
+                        <p style="font-size:12px; color:var(--ink-light); margin-top:10px; line-height:1.5;">Larger average tuber size improves commercial value and product grading — heavier tubers command higher market prices and better sorting efficiency.</p>
+                    </div>
+                </div>
+
+                <!-- Fertiliser & Soil Performance (shared metrics across both trials) -->
+                <h4 style="font-size:15px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--ink-faint); padding:14px 0 10px; border-top:2px solid var(--ink);">Fertiliser Utilisation &amp; Soil Performance (measured across both trials)</h4>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--rule); border:1px solid var(--rule);">
+                    <div style="background:var(--white); padding:28px 24px;">
+                        <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--ink-faint); margin-bottom:14px;">Nitrogen Utilisation Efficiency</div>
+                        <div class="yield-row"><span class="yield-label">Chemical fertiliser</span><span style="color:var(--danger); font-weight:600;">42%</span></div>
+                        <div class="yield-row"><span class="yield-label">Attapulgite fertiliser</span><span class="yield-val">61%</span></div>
+                        <div style="margin-top:14px; padding-top:12px; border-top:1px solid var(--rule-light); font-size:13px; color:var(--success); font-weight:700;">+45% improvement in N utilisation</div>
+                        <p style="font-size:12px; color:var(--ink-light); margin-top:10px; line-height:1.5;">Attapulgite binds nutrients and releases them gradually, reducing nutrient loss through leaching and improving plant uptake. This reduces fertiliser waste and improves economic efficiency.</p>
+                    </div>
+                    <div style="background:var(--white); padding:28px 24px;">
+                        <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--ink-faint); margin-bottom:14px;">Soil Moisture Retention</div>
+                        <div class="yield-row"><span class="yield-label">Chemical fertiliser</span><span style="font-weight:600; color:var(--ink);">Baseline</span></div>
+                        <div class="yield-row"><span class="yield-label">Attapulgite fertiliser</span><span class="yield-val">+18–26%</span></div>
+                        <div style="margin-top:14px; padding-top:12px; border-top:1px solid var(--rule-light); font-size:13px; color:var(--success); font-weight:700;">Improved moisture retention</div>
+                        <p style="font-size:12px; color:var(--ink-light); margin-top:10px; line-height:1.5;">Improved soil moisture retention enhances plant stability, improves drought resistance, and supports consistent crop development throughout the growth cycle.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ======================== TRIAL 03 — POULTRY ======================== -->
+            <div style="margin-top:64px;">
+                <div style="background:var(--accent); color:white; padding:14px 28px; display:flex; align-items:baseline; justify-content:space-between;">
+                    <span style="font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:2px;">Trial 03 — Poultry Production Pilot</span>
+                    <span style="font-size:13px; color:rgba(255,255,255,0.7);">Cowra, New South Wales, Australia</span>
+                </div>
+                <div style="background:var(--accent-light); padding:20px 28px; border:1px solid var(--accent); border-top:none; margin-bottom:24px;">
+                    <p style="font-size:14px; color:var(--ink-light); line-height:1.7;"><strong>Context:</strong> Production data from Shed 2 and Shed 3 of a commercial laying hen facility. The trial compares hen-day production (HD%), feed per dozen, and first-quality egg rates across two sheds — one with attapulgite introduced as a feed/bedding additive and one without. The data documents both a same-age comparison and a revitalisation case where a severely declining shed recovered rapidly after attapulgite introduction.</p>
+                </div>
+
+                <!-- Summary boxes -->
+                <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--rule); border:1px solid var(--rule); margin-bottom:24px;">
+                    <div style="background:var(--white); padding:28px 24px; text-align:center;">
+                        <div style="font-family:'Libre Baskerville',serif; font-size:42px; font-weight:700; color:var(--success); line-height:1; margin-bottom:8px;">+39pt</div>
+                        <div style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--ink-faint);">HD Recovery</div>
+                        <p style="font-size:12px; color:var(--ink-light); margin-top:8px; line-height:1.5;">Shed 2 climbed 38% → 77% HD within 4 weeks of attapulgite introduction</p>
+                    </div>
+                    <div style="background:var(--white); padding:28px 24px; text-align:center;">
+                        <div style="font-family:'Libre Baskerville',serif; font-size:42px; font-weight:700; color:var(--success); line-height:1; margin-bottom:8px;">~70%</div>
+                        <div style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--ink-faint);">HD Stabilised</div>
+                        <p style="font-size:12px; color:var(--ink-light); margin-top:8px; line-height:1.5;">Treated shed held 70–78% HD through week 126, while untreated shed fell to 63%</p>
+                    </div>
+                    <div style="background:var(--white); padding:28px 24px; text-align:center;">
+                        <div style="font-family:'Libre Baskerville',serif; font-size:42px; font-weight:700; color:var(--success); line-height:1; margin-bottom:8px;">88–91%</div>
+                        <div style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--ink-faint);">First Quality Eggs</div>
+                        <p style="font-size:12px; color:var(--ink-light); margin-top:8px; line-height:1.5;">Treated shed held 88–91% vs. untreated shed at 86% and declining</p>
+                    </div>
+                    <div style="background:var(--white); padding:28px 24px; text-align:center;">
+                        <div style="font-family:'Libre Baskerville',serif; font-size:42px; font-weight:700; color:var(--success); line-height:1; margin-bottom:8px;">&lt;2.0</div>
+                        <div style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--ink-faint);">Feed/Dozen (kg)</div>
+                        <p style="font-size:12px; color:var(--ink-light); margin-top:8px; line-height:1.5;">Treated shed stayed mostly &lt;2.0 kg/dozen vs. untreated reaching 2.53</p>
+                    </div>
+                </div>
+
+                <!-- Comparison tables -->
+                <h4 style="font-size:15px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--ink-faint); padding:14px 0 10px; border-top:1px solid var(--rule);">Comparison A — Same Age, Late Lay (Weeks 110–126)</h4>
+                <table class="proof-table" style="margin-bottom:24px;">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Shed 3 — No Attapulgite</th>
+                            <th>Shed 2 — With Attapulgite</th>
+                            <th>Difference</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-weight:600;">HD% at Week 110</td>
+                            <td>76%</td>
+                            <td class="result-pos">38% (entering recovery)</td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:600;">HD% at Week 114</td>
+                            <td class="result-neg">74% (declining)</td>
+                            <td class="result-pos">77% (recovered)</td>
+                            <td class="result-pos">+3pt</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:600;">HD% at Week 126</td>
+                            <td class="result-neg">63% (–13pt from 110)</td>
+                            <td class="result-pos">70% (stable)</td>
+                            <td class="result-pos">+7pt</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:600;">Feed/dozen — peak week</td>
+                            <td class="result-neg">2.53 kg/dozen (Wk 126)</td>
+                            <td class="result-pos">2.20 kg/dozen (avoids spike)</td>
+                            <td class="result-pos">−0.33 kg/dozen</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:600;">First quality eggs</td>
+                            <td class="result-neg">86–88% (flat/declining)</td>
+                            <td class="result-pos">88–91% (holding high)</td>
+                            <td class="result-pos">+2–5 percentage points</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 style="font-size:15px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--ink-faint); padding:14px 0 10px; border-top:1px solid var(--rule);">Comparison B — Mid-Lay Period (Weeks 84–104)</h4>
+                <table class="proof-table" style="margin-bottom:24px;">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Shed 2 — No Attapulgite</th>
+                            <th>Shed 3 — With Attapulgite</th>
+                            <th>Difference</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-weight:600;">HD% at Week 84</td>
+                            <td>85%</td>
+                            <td>87%</td>
+                            <td>+2pt start</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:600;">HD% at Week 104</td>
+                            <td class="result-neg">55% (–30pt decline)</td>
+                            <td class="result-pos">64% (–23pt decline)</td>
+                            <td class="result-pos">+9pt at end</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:600;">First quality Week 104</td>
+                            <td class="result-neg">~80%</td>
+                            <td class="result-pos">~87%</td>
+                            <td class="result-pos">+7pt</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:600;">Overall production decline</td>
+                            <td class="result-neg">Steeper, faster collapse</td>
+                            <td class="result-pos">More controlled, higher floor</td>
+                            <td>—</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div style="background:var(--gold-light); border:2px solid var(--gold); padding:24px 32px;">
+                    <p style="font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--gold); margin-bottom:10px;">Trial Interpretation</p>
+                    <p style="font-size:14px; color:var(--ink); line-height:1.75;">This data does not represent peak performance enhancement. It represents <strong>measurable stabilisation and risk reduction during the most fragile phase of the production cycle</strong>. The revitalisation case (Shed 2, Weeks 110–126) shows a severely declining shed recover from 38% → 77% HD within 4 weeks and sustain commercial production through week 126. The early-intervention case (Shed 3, Weeks 84–104) shows more controlled decline and a higher production floor. Both patterns support the same conclusion: <strong>attapulgite introduction — whether early or late — is associated with improved production stability in late lay.</strong></p>
+                </div>
+            </div>
+
+            <!-- ======================== SUMMARY TABLE ======================== -->
+            <div style="margin-top:64px;">
+                <h3 style="font-size:18px; font-weight:700; color:var(--ink); margin-bottom:20px; padding-top:10px; border-top:2px solid var(--ink);">All Pilot Sites — Summary</h3>
+                <table class="proof-table">
+                    <thead>
+                        <tr>
+                            <th>Farm Type</th>
+                            <th>Location</th>
+                            <th>Parameter Measured</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Chinese Cabbage — Field Trial</td>
+                            <td>Pingdu, Shandong, China</td>
+                            <td>Marketable yield</td>
+                            <td class="result-pos">↑ +11.5%</td>
+                        </tr>
+                        <tr>
+                            <td>Chinese Cabbage — Field Trial</td>
+                            <td>Pingdu, Shandong, China</td>
+                            <td>Nitrate content (food safety)</td>
+                            <td class="result-neg">↓ −23%</td>
+                        </tr>
+                        <tr>
+                            <td>Potato — Field Trial</td>
+                            <td>Pingdu, Shandong, China</td>
+                            <td>Marketable yield</td>
+                            <td class="result-pos">↑ +13.9%</td>
+                        </tr>
+                        <tr>
+                            <td>Potato — Field Trial</td>
+                            <td>Pingdu, Shandong, China</td>
+                            <td>Average tuber weight</td>
+                            <td class="result-pos">↑ +12.1%</td>
+                        </tr>
+                        <tr>
+                            <td>Arable — N Efficiency</td>
+                            <td>Pingdu, Shandong, China</td>
+                            <td>Nitrogen utilisation rate</td>
+                            <td class="result-pos">↑ 42% → 61% (+45%)</td>
+                        </tr>
+                        <tr>
+                            <td>Laying Hens — Late Lay</td>
+                            <td>Cowra, NSW, Australia</td>
+                            <td>Hen-day production (HD%)</td>
+                            <td class="result-pos">↑ 38% → 77% after attapulgite; held 70–78%</td>
+                        </tr>
+                        <tr>
+                            <td>Laying Hens — Late Lay</td>
+                            <td>Cowra, NSW, Australia</td>
+                            <td>First-quality eggs</td>
+                            <td class="result-pos">↑ 88–91% vs. 86% untreated</td>
+                        </tr>
+                        <tr>
+                            <td>Laying Hens — Late Lay</td>
+                            <td>Cowra, NSW, Australia</td>
+                            <td>Feed efficiency (kg/dozen)</td>
+                            <td class="result-neg">↓ Peak 2.20 vs. 2.53 untreated</td>
+                        </tr>
+                        <tr>
+                            <td>Dairy Production</td>
+                            <td>Victoria, Australia</td>
+                            <td>Bedding moisture control</td>
+                            <td class="result-pos">↑ Improvement observed</td>
+                        </tr>
+                        <tr>
+                            <td>Vegetable Cultivation</td>
+                            <td>Queensland, Australia</td>
+                            <td>Soil water retention</td>
+                            <td class="result-pos">↑ Improvement observed</td>
+                        </tr>
+                        <tr>
+                            <td>Rice Production</td>
+                            <td>Hokkaido, Japan</td>
+                            <td>Nutrient leaching rates</td>
+                            <td class="result-neg">↓ Reduction observed</td>
+                        </tr>
+                        <tr>
+                            <td>Wheat / Grain</td>
+                            <td>Western Australia</td>
+                            <td>Silica fertilisation &amp; compost granule</td>
+                            <td class="result-pos">↑ Ongoing — data collection in progress</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="font-size:13px; color:var(--ink-faint); font-style:italic; margin-top:20px; line-height:1.6;">Quantitative results are drawn from documented field trials and recorded production data. Directional results reflect early-stage pilot programs. Full datasets available for qualified partners under appropriate confidentiality agreements.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MISSION -->
+    <div class="mission-block">
+        <p class="mission-text">"We are a mineral technology company focused on transforming underutilised waste streams into valuable agricultural and industrial products. Our use of attapulgite enables the stabilisation of livestock waste, improvement of fertiliser efficiency, and production of high-performance absorbent materials — creating integrated mineral-based solutions that improve efficiency, reduce environmental burden, and unlock value from existing resource streams."</p>
+        <p class="mission-attr">— Nodus Ventures, Strategic Direction</p>
+    </div>
+
+    <!-- ABOUT BANNER -->
+    <div class="section-banner">
+        <div class="section-banner-inner">
+            <div class="section-banner-num">06</div>
+            <div class="section-banner-title">About</div>
+            <div class="section-banner-desc">Who we are &amp; how we operate</div>
+        </div>
+    </div>
+
+    <!-- ORGANIZATION -->
+    <section class="section" id="organization">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Organization</div>
+                <h2 class="section-title">Who We Are</h2>
+                <p class="section-intro">We are a mineral technology company. That means one core material — attapulgite — applied with precision across waste management, agriculture, and consumer products. This coherence is intentional.</p>
+            </div>
+
+            <!-- Identity block -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--rule); border:1px solid var(--rule); margin-bottom:40px;">
+                <div style="background:var(--white); padding:40px;">
+                    <p style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:var(--ink-faint); margin-bottom:16px; border-bottom:1px solid var(--rule); padding-bottom:10px;">For farmers &amp; field partners</p>
+                    <p style="font-size:18px; color:var(--ink); line-height:1.7; font-weight:400;">We help farms stabilise waste and improve soil using mineral-based solutions.</p>
+                </div>
+                <div style="background:var(--white); padding:40px;">
+                    <p style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:var(--ink-faint); margin-bottom:16px; border-bottom:1px solid var(--rule); padding-bottom:10px;">For partners &amp; industry</p>
+                    <p style="font-size:18px; color:var(--ink); line-height:1.7; font-weight:400;">We are a mineral-based agricultural and environmental solutions company focused on improving the efficiency of waste utilisation and fertilisation systems.</p>
+                </div>
+            </div>
+
+            <div class="team-block">
+                <div class="team-name">Alex</div>
+                <div class="team-title">Founder &amp; Director</div>
+                <p class="team-bio">Mineral technology specialist with a background in agricultural applications, waste management systems, and absorbent material development. Founded Nodus Ventures to build a coherent mineral technology company — sourcing, processing, and applying attapulgite across waste stabilisation, agricultural efficiency, and consumer absorbent products across the Asia-Pacific region.</p>
+                <div class="ops-strip">
+                    <div class="ops-label">Geographic Operations</div>
+                    <div class="ops-regions">Australia &nbsp;·&nbsp; Japan &nbsp;·&nbsp; China</div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <div class="compliance-notice">
+                <div class="compliance-title">Regulatory Compliance Statement</div>
+                <p class="compliance-text">All Nodus Ventures pilot programs and commercial trials operate in full accordance with local fertiliser and feed regulations applicable in Australia, Japan, and China. Product applications are conducted under jurisdiction-specific guidelines for agricultural inputs and soil amendment materials.</p>
+                <p class="compliance-text">Field trials are conducted with appropriate regulatory permissions and maintain compliance with regional agricultural standards and safety requirements. All materials sourced from Hudson Resources Limited are produced under standard Australian mining and environmental regulation frameworks.</p>
+                <p style="font-size: 13px; color: var(--ink-faint); font-style: italic;">This statement is particularly material for Japan-based partners and regulatory reviewers. Nodus Ventures does not make commercial claims beyond what is verifiable through its pilot data and supplier documentation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <div class="contact-section" id="contact">
+        <div class="contact-inner">
+            <p class="contact-label">Get In Touch</p>
+            <h2 class="contact-heading">Partnership &amp; Commercial Enquiries</h2>
+            <div class="contact-box">
+                <p class="contact-desc">We are actively seeking commercial farm partners, waste management operators, agri-distributors, and industry collaborators across Australia, Japan, and China. Whether your interest is in waste stabilisation, fertiliser efficiency, or absorbent product supply — we welcome the conversation.</p>
+                <a href="/cdn-cgi/l/email-protection#7d1e1213091c1e093d131219080e0b181309080f180e531e1210" class="contact-email-link"><span class="__cf_email__" data-cfemail="4e2d21203a2f2d3a0e20212a3b3d382b203a3b3c2b3d602d2123">[email&#160;protected]</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOO
